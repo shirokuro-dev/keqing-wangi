@@ -36,6 +36,7 @@ function copyToClipboard() {
         // document.execCommand("copy");
         // alert("Copied the text: " + copyText.value);
         navigator.clipboard.writeText(text).then(function() {
+            alert("Pesan untuk waifu tercinta telah di copy di clipboard");
             console.log('Async: Copying to clipboard was successful!');
         }, function(err) {
             console.error('Async: Could not copy text: ', err);
