@@ -3,24 +3,84 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>WAIFU Anda</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <title>WAIFU Anda</title>
+
+    <!-- Tailwindcss: Awesome CSS Framework -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+
+    <!-- JavaScript -->
     <script src='main.js'></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9MEMXSJRZ6"></script>
-        <script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-9MEMXSJRZ6" defer></script>
+    <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'G-9MEMXSJRZ6');
-        </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4566884797498778"
-     crossorigin="anonymous"></script>
+    </script>
+    <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4566884797498778" crossorigin="anonymous" defer></script>
 </head>
-<body>
-    <div
+<body class="dark:text-white">
+    <main class="container mx-auto">
+        <section class="flex flex-col items-center justify-center gap-10 p-4">
+            <div class="backdrop-blur-sm bg-white/30 dark:bg-black/30 rounded p-12 space-y-8">
+                <div class="header">
+                    <a href="/" class="title-link focus:outline-none">
+                        <h1 class="title-text inline-block font-bold tracking-wider text-4xl">Dunia Waifu</h1>
+                    </a>
+                    <p>Ungkapkan perasaan ke waifu tercinta.</p>
+                </div>
+
+                <div class="form space-y-4">
+                    <div class="input-group flex space-x-4">
+                        <label for="nama_waifu" class="text-xl">Waifu mu:</label>
+                        <input onchange="updateNama(this.value)" type="text" id="nama_waifu" placeholder="Keqing, Rem ..." class="flex-1 dark:bg-gray-900 border-2 border-transparent focus:border-pink-400 rounded focus:outline-none px-2 py-1">
+                    </div>
+
+                    <div class="input-group flex space-x-4">
+                        <label for="tamplate" class="text-xl">Tamplate:</label>
+                        <div class="flex-1 custom-select">
+                            <select onchange="updateTamplate(this.value)" id="tamplate" class="flex-1 dark:bg-gray-900 border-2 border-transparent focus:border-pink-400 rounded focus:outline-none px-2 py-1">
+                                <option value="0">Pilih ngab!...</option>
+                                <option value="1">Tamplate 1</option>
+                                <option value="2">Tamplate 2</option>
+                                <option value="3">Tamplate 3</option>
+                                <option value="4">Tamplate 4</option>
+                                <option value="5">Tamplate 5</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button onclick="copyText()" type="button" class="flex items-center justify-center w-full bg-pink-400 dark:bg-pink-300 text-gray-900 text-xl border-2 border-transparent hover:border-white focus:border-white focus:bg-pink-300 rounded focus:outline-none px-4 py-2 space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path fill="currentColor" d="M5 22q-.825 0-1.413-.587Q3 20.825 3 20V6h2v14h11v2Zm4-4q-.825 0-1.412-.587Q7 16.825 7 16V4q0-.825.588-1.413Q8.175 2 9 2h9q.825 0 1.413.587Q20 3.175 20 4v12q0 .825-.587 1.413Q18.825 18 18 18Zm0-2h9V4H9v12Zm0 0V4v12Z"/></svg>
+                        <span>Copy text</span>
+                    </button>
+                </div>
+
+                <a href="https://www.youtube.com/channel/UCti8M-UQCs9ocjUlSVU9rgA" class="block flex items-center hover:underline focus:underline focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="-35.20005 -41.33325 305.0671 247.9995"><path d="M229.763 25.817c-2.699-10.162-10.65-18.165-20.748-20.881C190.716 0 117.333 0 117.333 0S43.951 0 25.651 4.936C15.553 7.652 7.6 15.655 4.903 25.817 0 44.236 0 82.667 0 82.667s0 38.429 4.903 56.85C7.6 149.68 15.553 157.681 25.65 160.4c18.3 4.934 91.682 4.934 91.682 4.934s73.383 0 91.682-4.934c10.098-2.718 18.049-10.72 20.748-20.882 4.904-18.421 4.904-56.85 4.904-56.85s0-38.431-4.904-56.85" fill="red"/><path d="M93.333 117.559l61.333-34.89-61.333-34.894z" fill="#fff"/></svg>
+                    <span>Toturial menjadi wibu & temukan waifu mu</span>
+                </a>
+            </div>
+
+            <div class="flex flex-col items-center text-xs">
+                <div>
+                    UI Courtesy from <a href="https://github.com/lnfel" class="text-pink-400 dark:text-pink-300 border-b-2 border-transparent hover:border-pink-400 focus:border-pink-400 focus:outline-none">lnfel</a>
+                </div>
+                <div>
+                    Art by <a href="https://www.pixiv.net/en/artworks/104381074" class="text-pink-400 dark:text-pink-300 border-b-2 border-transparent hover:border-pink-400 focus:border-pink-400 focus:outline-none">pikaqiuonline</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- <div
         style="width: 100%; height: 600px;display: flex; justify-content: center; align-items: center; background-image: url('img1.jpg');"
     >
         <div
@@ -61,6 +121,6 @@
             </div>
             <input type="text" value="" id="myInput" hidden>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>

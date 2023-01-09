@@ -1,0 +1,78 @@
+body {
+    background-color: rgb(209 213 219);
+    background-image: url('../images/keqing_00.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100vh;
+    overflow: hidden;
+
+    font-family: system-ui, -apple-system, /* Firefox supports this but not yet `system-ui` */ 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'!important;
+}
+
+/**
+ * Reset style including removing the default dropdown arrow
+ * https://moderncss.dev/custom-select-styles-with-pure-css/
+ */
+select {
+    appearance: none;
+}
+
+.custom-select {
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    cursor: pointer;
+}
+
+select,
+.custom-select:after {
+  grid-area: select;
+}
+
+.custom-select::after {
+    justify-self: end;
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: rgb(38 38 38);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    margin-right: 0.5rem;
+}
+
+main, section {
+    height: 100%;
+}
+
+.title-text {
+    background: linear-gradient(150deg, rgb(38 38 38) 50%, rgb(236 72 153) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: 50%;
+    background-size: 300% 300%;
+    transition: all .2s ease-in;
+}
+
+.title-link:hover .title-text, .title-link:focus .title-text {
+    background-position: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(38 38 38);
+    }
+
+    .title-text {
+        background: linear-gradient(150deg, rgb(255 255 255) 50%, rgb(249 168 212) 50%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-position: 50%;
+        background-size: 300% 300%;
+        transition: all .2s ease-in;
+    }
+
+    .custom-select::after {
+        background-color: rgb(249 168 212);
+    }
+}
