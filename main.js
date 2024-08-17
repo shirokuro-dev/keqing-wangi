@@ -35,15 +35,10 @@ function copyText() {
   }
 
 function copyToClipboard() {
-    var copyText = document.getElementById("myInput");
     var nama = document.getElementById("nama_waifu").value;
     var tamplate = document.getElementById("tamplate").value;
     console.log(nama, tamplate);
     if(nama && tamplate){
-        // copyText.select();
-        // copyText.setSelectionRange(0, 99999)
-        // document.execCommand("copy");
-        // alert("Copied the text: " + copyText.value);
         navigator.clipboard.writeText(text).then(function() {
             alert("Pesan untuk waifu tercinta telah di copy di clipboard");
             console.log('Async: Copying to clipboard was successful!');

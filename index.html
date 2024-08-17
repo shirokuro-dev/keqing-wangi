@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>WAIFU Anda</title>
 
+    <link rel="icon" href="images/icon.ico" type="image/x-icon">
     <!-- Tailwindcss: Awesome CSS Framework -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- CSS -->
     <link href="css/main.css" rel="stylesheet" type="text/css">
 
@@ -18,13 +20,14 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9MEMXSJRZ6"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-9MEMXSJRZ6');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9MEMXSJRZ6');
     </script>
 </head>
+
 <body class="dark:text-white">
     <main class="container mx-auto">
         <section class="flex flex-col items-center justify-center gap-10 p-4">
@@ -39,13 +42,16 @@
                 <div class="form space-y-4">
                     <div class="input-group flex space-x-4">
                         <label for="nama_waifu" class="text-xl">Waifu mu:</label>
-                        <input onchange="updateNama(this.value)" type="text" id="nama_waifu" placeholder="Keqing, Rem ..." class="flex-1 dark:bg-gray-900 border-2 border-transparent focus:border-pink-400 rounded focus:outline-none px-2 py-1">
+                        <input onchange="updateNama(this.value)" type="text" id="nama_waifu"
+                            placeholder="Keqing, Rem ..."
+                            class="flex-1 dark:bg-gray-900 border-2 border-transparent focus:border-pink-400 rounded focus:outline-none px-2 py-1">
                     </div>
 
                     <div class="input-group flex space-x-4">
                         <label for="tamplate" class="text-xl">Tamplate:</label>
                         <div class="flex-1 custom-select">
-                            <select onchange="updateTamplate(this.value)" id="tamplate" class="flex-1 dark:bg-gray-900 border-2 border-transparent focus:border-pink-400 rounded focus:outline-none px-2 py-1">
+                            <select onchange="updateTamplate(this.value)" id="tamplate"
+                                class="flex-1 dark:bg-gray-900 border-2 border-transparent focus:border-pink-400 rounded focus:outline-none px-2 py-1">
                                 <option value="0">Pilih ngab!...</option>
                                 <option value="1">Tamplate 1</option>
                                 <option value="2">Tamplate 2</option>
@@ -56,70 +62,75 @@
                         </div>
                     </div>
 
-                    <button onclick="copyText()" type="button" class="flex items-center justify-center w-full bg-pink-400 dark:bg-pink-300 text-gray-900 text-xl border-2 border-transparent hover:border-white focus:border-white focus:bg-pink-300 rounded focus:outline-none px-4 py-2 space-x-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path fill="currentColor" d="M5 22q-.825 0-1.413-.587Q3 20.825 3 20V6h2v14h11v2Zm4-4q-.825 0-1.412-.587Q7 16.825 7 16V4q0-.825.588-1.413Q8.175 2 9 2h9q.825 0 1.413.587Q20 3.175 20 4v12q0 .825-.587 1.413Q18.825 18 18 18Zm0-2h9V4H9v12Zm0 0V4v12Z"/></svg>
+                    <button onclick="copyText()" type="button"
+                        class="flex items-center justify-center w-full bg-pink-400 dark:bg-pink-300 text-gray-900 text-xl border-2 border-transparent hover:border-white focus:border-white focus:bg-pink-300 rounded focus:outline-none px-4 py-2 space-x-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+                            <path fill="currentColor"
+                                d="M5 22q-.825 0-1.413-.587Q3 20.825 3 20V6h2v14h11v2Zm4-4q-.825 0-1.412-.587Q7 16.825 7 16V4q0-.825.588-1.413Q8.175 2 9 2h9q.825 0 1.413.587Q20 3.175 20 4v12q0 .825-.587 1.413Q18.825 18 18 18Zm0-2h9V4H9v12Zm0 0V4v12Z" />
+                        </svg>
                         <span>Copy text</span>
                     </button>
                 </div>
 
-                <a href="https://www.youtube.com/channel/UCti8M-UQCs9ocjUlSVU9rgA" class="block flex items-center hover:underline focus:underline focus:outline-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="-35.20005 -41.33325 305.0671 247.9995"><path d="M229.763 25.817c-2.699-10.162-10.65-18.165-20.748-20.881C190.716 0 117.333 0 117.333 0S43.951 0 25.651 4.936C15.553 7.652 7.6 15.655 4.903 25.817 0 44.236 0 82.667 0 82.667s0 38.429 4.903 56.85C7.6 149.68 15.553 157.681 25.65 160.4c18.3 4.934 91.682 4.934 91.682 4.934s73.383 0 91.682-4.934c10.098-2.718 18.049-10.72 20.748-20.882 4.904-18.421 4.904-56.85 4.904-56.85s0-38.431-4.904-56.85" fill="red"/><path d="M93.333 117.559l61.333-34.89-61.333-34.894z" fill="#fff"/></svg>
-                    <span>Toturial menjadi wibu & temukan waifu mu</span>
-                </a>
+                <div>
+                    <a href="https://www.youtube.com/channel/UCti8M-UQCs9ocjUlSVU9rgA"
+                        class="block flex items-center hover:underline focus:underline focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50"
+                            viewBox="-35.20005 -41.33325 305.0671 247.9995">
+                            <path
+                                d="M229.763 25.817c-2.699-10.162-10.65-18.165-20.748-20.881C190.716 0 117.333 0 117.333 0S43.951 0 25.651 4.936C15.553 7.652 7.6 15.655 4.903 25.817 0 44.236 0 82.667 0 82.667s0 38.429 4.903 56.85C7.6 149.68 15.553 157.681 25.65 160.4c18.3 4.934 91.682 4.934 91.682 4.934s73.383 0 91.682-4.934c10.098-2.718 18.049-10.72 20.748-20.882 4.904-18.421 4.904-56.85 4.904-56.85s0-38.431-4.904-56.85"
+                                fill="red" />
+                            <path d="M93.333 117.559l61.333-34.89-61.333-34.894z" fill="#fff" />
+                        </svg>
+                        <span>Toturial menjadi wibu & temukan waifu mu</span>
+                    </a>
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                            id="Layer_1" x="0px" y="0px" viewBox="0 0 92.27 122.88" width="50" height="37"
+                            style="enable-background:new 0 0 92.27 122.88" xml:space="preserve">
+                            <style type="text/css">
+                                .st0 {
+                                    fill-rule: evenodd;
+                                    clip-rule: evenodd;
+                                    fill: #EC6F59;
+                                }
+
+                                .st1 {
+                                    fill-rule: evenodd;
+                                    clip-rule: evenodd;
+                                    fill: #FAD15C;
+                                }
+                            </style>
+                            <g>
+                                <path class="st0"
+                                    d="M18.61,54.89C15.7,28.8,30.94,10.45,59.52,0C42.02,22.71,74.44,47.31,76.23,70.89 c4.19-7.15,6.57-16.69,7.04-29.45c21.43,33.62,3.66,88.57-43.5,80.67c-4.33-0.72-8.5-2.09-12.3-4.13C10.27,108.8,0,88.79,0,69.68 C0,57.5,5.21,46.63,11.95,37.99C12.85,46.45,14.77,52.76,18.61,54.89L18.61,54.89z" />
+                                <path class="st1"
+                                    d="M33.87,92.58c-4.86-12.55-4.19-32.82,9.42-39.93c0.1,23.3,23.05,26.27,18.8,51.14 c3.92-4.44,5.9-11.54,6.25-17.15c6.22,14.24,1.34,25.63-7.53,31.43c-26.97,17.64-50.19-18.12-34.75-37.72 C26.53,84.73,31.89,91.49,33.87,92.58L33.87,92.58z" />
+                            </g>
+                        </svg>
+                        <a class="hover:underline focus:underline focus:outline-none"
+                            href="https://roasting-genshin-player.shirokuro.dev">Coba website <span
+                                class="font-semibold">Roasting Genshin Impact</span> kami</a></span>
+                    </div>
+                </div>
             </div>
 
             <div class="flex flex-col items-center text-xs">
                 <div>
-                    UI Courtesy from <a href="https://github.com/lnfel" class="text-pink-400 dark:text-pink-300 border-b-2 border-transparent hover:border-pink-400 focus:border-pink-400 focus:outline-none">lnfel</a>
+                    Developed by <a href="https://github.com/shirokuro-dev"
+                        class="text-pink-400 dark:text-pink-300 border-b-2 border-transparent hover:border-pink-400 focus:border-pink-400 focus:outline-none">shirokuro-dev</a>
                 </div>
                 <div>
-                    Art by <a href="https://www.pixiv.net/en/artworks/104381074" class="text-pink-400 dark:text-pink-300 border-b-2 border-transparent hover:border-pink-400 focus:border-pink-400 focus:outline-none">pikaqiuonline</a>
+                    UI Courtesy from <a href="https://github.com/lnfel"
+                        class="text-pink-400 dark:text-pink-300 border-b-2 border-transparent hover:border-pink-400 focus:border-pink-400 focus:outline-none">lnfel</a>
+                </div>
+                <div>
+                    Art by <a href="https://www.pixiv.net/en/artworks/104381074"
+                        class="text-pink-400 dark:text-pink-300 border-b-2 border-transparent hover:border-pink-400 focus:border-pink-400 focus:outline-none">pikaqiuonline</a>
                 </div>
             </div>
         </section>
     </main>
-
-    <!-- <div
-        style="width: 100%; height: 600px;display: flex; justify-content: center; align-items: center; background-image: url('img1.jpg');"
-    >
-        <div
-            style="margin: 5px; height: 440px; width: 500px; background-color: azure; justify-content: center; align-items: center; border-radius: 10px;"
-        >
-            <div
-            style="height: 70px; width: 100%; display: flex; justify-content: center; align-items: center; border-radius: 10px;"
-            >
-                <h1 style="font-family: sans-serif; color: cornflowerblue; text-align: center; top: -10px;">Dunia Waifu</h1>
-            </div>
-            <hr/>
-            <p style="font-family: sans-serif; color: cornflowerblue; text-align: center;"><u>Ungkapkan perasaan ke waifu tercinta</u></p>
-            <div style="height: 80px; display: flex; justify-content: center; align-items: center;">
-                <label style="font-size: 16px; font-family: sans-serif;">Waifu mu: 
-                    <input style="border-radius: 10px; height: 30px;" type="text" id="nama_waifu" placeholder="keqing, rem, ..." onchange="updateNama(this.value)"/>
-                </label>
-            </div>
-            <div style="height: 80px; display: flex; justify-content: center; align-items: center;">
-                <label style="font-size: 16px; font-family: sans-serif;">Tamplate:
-                    <select style="border-radius: 10px; height: 30px; width: 250px;" id="tamplate" onchange="updateTamplate(this.value)" >
-                        <option value="0">Pilih ngab!...</option>
-                        <option value="1">Tamplate 1</option>
-                        <option value="2">Tamplate 2</option>
-                        <option value="3">Tamplate 3</option>
-                        <option value="4">Tamplate 4</option>
-                        <option value="5">Tamplate 5</option>
-                    </select>
-                </label>
-            </div>
-            <hr/>
-            <div style="height: 50px; display: flex; justify-content: center; align-items: center;">
-                <button style="font-size: 18px; font-family: sans-serif; width: 90%; border-radius: 10px; height: 40px; background-color: cornflowerblue; color: floralwhite;" name='copy' onclick="copyText()"><b>Copy Text</b></button>
-            </div>
-            <hr/>
-            <div style="height: 50px; display: flex; justify-content: center; align-items: center;">
-                <img style="height: 20px; width: 20px; margin-right: 10px;" src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt='youtube'/>
-                <a href="https://www.youtube.com/channel/UCti8M-UQCs9ocjUlSVU9rgA" target="_blank" rel="noopener noreferrer">Toturial menjadi wibu & temukan waifu mu</a>
-            </div>
-            <input type="text" value="" id="myInput" hidden>
-        </div>
-    </div> -->
 </body>
+
 </html>
